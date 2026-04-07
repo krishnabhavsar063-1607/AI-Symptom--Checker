@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Symptom Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🧠 AI Symptom Checker</h1>
+
+    <form method="POST">
+        <label><input type="checkbox" name="fever" value="1"> Fever</label>
+        <label><input type="checkbox" name="cough" value="1"> Cough</label>
+        <label><input type="checkbox" name="headache" value="1"> Headache</label>
+        <label><input type="checkbox" name="fatigue" value="1"> Fatigue</label>
+        <label><input type="checkbox" name="body_pain" value="1"> Body Pain</label>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            Prediction: {{ prediction }}
+        </div>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

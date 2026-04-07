@@ -1,0 +1,7 @@
+fever,cough,headache,fatigue,body_pain,disease
+1,1,1,1,0,Flu
+1,1,0,1,1,Covid
+1,0,1,0,1,Dengue
+0,1,1,1,0,Cold
+1,0,0,1,1,Malaria
+0,0,1,0,0,Migraine
